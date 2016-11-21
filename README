@@ -1,0 +1,10 @@
+example:
+  python compare_csv.py -i test1.csv -I test2.csv -c MODEL
+
+TODO:
+  Change diff function to use pandas
+  	diff function can index on column
+	diff fuction creates 2 lists of diffs
+  Add Additional functionality
+  	Index on multiple columns
+
