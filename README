@@ -1,10 +1,22 @@
-example:
-  python compare_csv.py -i test1.csv -I test2.csv -c MODEL
+### usage: compare_csv.py [-h] -i INFILE1 -I INFILE2 -c COLUMN
 
-TODO:
-  Change diff function to use pandas
-  	diff function can index on column
-	diff fuction creates 2 lists of diffs
-  Add Additional functionality
-  	Index on multiple columns
+Compares two CSV files for matches and differences indexed on a column
 
+optional arguments:
+  -h, --help  show this help message and exit
+  -i INFILE1  Name of first CSV import file
+  -I INFILE2  Name of second CSV import file
+  -c COLUMN   Name of column to index on
+
+### example:
+python compare_csv.py -i test1.csv -I test2.csv -c MODEL
+
+### TODO:
+- [ ] Change diff function to use pandas
+- [ ] diff function can index on column
+- [ ] diff fuction creates 2 lists of diffs
+- [ ] Merge and diff verbose log
+- [ ] Index on multiple columns
+- [ ] Better Argument Description and error handling
+- [ ] Better overall error handling
+- [ ] Error log
