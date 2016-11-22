@@ -23,7 +23,7 @@ def main():
 
     # explicitly call the other functions
     merge_csvs(file1,file2,column)
-#    diff_csvs(file1,file2)
+    diff_csvs(file1,file2)
 
 # Define Compare funtion that joins on specified column
 def merge_csvs(file1,file2,column):
