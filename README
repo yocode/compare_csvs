@@ -16,6 +16,7 @@ python compare_csv.py -i test1.csv -I test2.csv -c MODEL
 - [ ] diff function can index on column
 - [ ] diff fuction creates 2 lists of diffs
 - [ ] Merge and diff verbose log
+- [x] Better Merge function which inner joins to produce only matches on index column
 - [ ] Index on multiple columns
 - [ ] Better Argument Description and error handling
 - [ ] Better overall error handling

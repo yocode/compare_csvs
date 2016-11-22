@@ -20,29 +20,23 @@ def main():
     file1 = args.infile1
     file2 = args.infile2
     column = args.column
-    print(file1)
-    print(file2)
 
     # explicitly call the other functions
     merge_csvs(file1,file2,column)
-    diff_csvs(file1,file2)
+#    diff_csvs(file1,file2)
 
 # Define Compare funtion that joins on specified column
 def merge_csvs(file1,file2,column):
     a = pd.read_csv(file1)
     b = pd.read_csv(file2)
-    print(a)
-    print(b)
-
-    merged = b.merge(a, on=column)
+    
+    merged = a.merge(b, on=column, how='inner')
     merged.to_csv("merged_results.csv", index=False) 
 
 # Define Diff function that diffs on specified column
 def diff_csvs(file1,file2):
     s = open(file1, 'r')
     k = open(file2, 'r')
-    print(s)
-    print(k)
 
     checkS = csv.reader(s)
     checkK = csv.reader(k)
@@ -58,5 +52,5 @@ def diff_csvs(file1,file2):
         writer = csv.writer(l)
         writer.writerows(output2)
 
-# Main Function that Calls all the other functions
+# Main function call
 main()
